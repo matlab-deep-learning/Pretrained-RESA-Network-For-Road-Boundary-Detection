@@ -29,7 +29,7 @@ addpath(genpath('src'));
 Use the code below to download the pretrained network.
 
 ```matlab
-model = helper.downloadPretrainedRoadBoundaryDetectionYoloX;
+model = helper.downloadPretrainedRoadBoundaryDetection;
 net = model.net;
 ```
 
@@ -47,11 +47,11 @@ params = helper.createDetectionParameters;
 executionEnvironment = "auto";
 
 % Call detectRoadBoundaries to detect the road boundaries.
-roadBoundaries = detectRoadBoundaries(net, image, params, executionEnvironment);
+roadBoundaries = detectRoadBoundaries(net, img, params, executionEnvironment);
 
 % Visualize the detected lanes.
 fig = figure;
-helper.plotBoundaries(fig, image, roadBoundaries);
+helper.plotBoundaries(fig, img, roadBoundaries);
 ```
 Alternatively, you can also run the model on sample videos. Use the script roadBoundaryVideoDetection.m to run the inference on a driving scene.
 ![Results](/images/results.png)
@@ -62,6 +62,7 @@ RESA is one of the best performing lane detection architectures. It takes advant
 
 ## References
 [1] Zheng, Tu et al. "RESA: Recurrent Feature-Shift Aggregator for Lane Detection." AAAI (2021).
+
 [2] https://github.com/commaai/comma10k
 
 Copyright 2022 The MathWorks, Inc.
