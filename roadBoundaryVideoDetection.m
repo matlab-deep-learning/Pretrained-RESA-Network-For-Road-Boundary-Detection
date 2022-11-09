@@ -1,8 +1,8 @@
 %% Prerequisites
 % To run this example you need the following prerequisites - 
-% * MATLAB (R2022b or later).
-% * Deep Learning Toolbox.
-% * Computer Vision Toolbox.
+% * MATLAB &reg;  (R2022b or later).
+% * Deep Learning Toolbox &trade;.
+% * Computer Vision Toolbox &trade;.
 
 %% Add path to the source directory
 addpath('src','model','images');
@@ -24,21 +24,17 @@ executionEnvironment = "gpu";
 
 %% Detect in Video
 % Read the video.
-v = VideoReader('../../resa/resa/videos/20200731_135007_DRVR04_CSMV6598_02_FRONT.mp4');
+v = VideoReader('Specify video path');
 
 % Store the video start time.
 videoStartTime = v.CurrentTime;
 
 % Detect using the detectRoadBoundaryVideo function provided as helper
 % function below.
-profile clear;
-profile on;
 roadBoundaries = detectRoadBoundaryVideo(net, v, params, miniBatchSize, executionEnvironment);
-profile off;
 
 % Plot detections in video and save result.
 helper.plotBoundariesVideo(v, roadBoundaries, videoStartTime);
-
 
 %% Helper function to Detect in Video
 function roadBoundaries = detectRoadBoundaryVideo(net, v, params, miniBatchSize, executionEnvironment)

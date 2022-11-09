@@ -1,8 +1,8 @@
 %% Prerequisites
 % To run this example you need the following prerequisites - 
-% * MATLAB (R2022b or later).
-% * Deep Learning Toolbox. 
-% * Computer Vision Toolbox.
+% * MATLAB &reg; (R2022b or later).
+% * Deep Learning Toolbox &trade; . 
+% * Computer Vision Toolbox &trade; .
 
 %% Add path to the source directory
 addpath('src','model','images');

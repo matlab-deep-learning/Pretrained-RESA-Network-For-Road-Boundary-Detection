@@ -11,8 +11,8 @@ This repository provides a pretrained RESA [1] network for MATLAB®, trained on 
 
 ## Requirements
 - MATLAB® R2022b or later
-- Deep Learning Toolbox
-- Computer Vision Toolbox
+- Deep Learning Toolbox &trade;
+- Computer Vision Toolbox &trade;
 
 
 ## Getting Started
@@ -49,7 +49,7 @@ executionEnvironment = "auto";
 % Call detectRoadBoundaries to detect the road boundaries.
 roadBoundaries = detectRoadBoundaries(net, img, params, executionEnvironment);
 
-% Visualize the detected lanes.
+% Visualize the detected boundaries.
 fig = figure;
 helper.plotBoundaries(fig, img, roadBoundaries);
 ```
