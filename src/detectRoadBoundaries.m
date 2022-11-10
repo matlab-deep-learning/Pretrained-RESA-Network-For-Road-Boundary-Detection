@@ -36,7 +36,7 @@ function detections = detectRoadBoundaries(net, data, params, executionEnvironme
 %                        colums are X and Y values of their respective
 %                        pixel coordinates.
 
-% Copyright 2021 The MathWorks, Inc.
+% Copyright 2022 The MathWorks, Inc.
 
 % Parse input arguments.
 arguments
