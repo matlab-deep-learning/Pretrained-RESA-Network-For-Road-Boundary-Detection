@@ -5,10 +5,11 @@
 % * Computer Vision Toolbox(TM).
 
 %% Add path to the source directory
-addpath('src','model','images');
+addpath('src');
 
 %% load Pre-trained Network
-load('model/resa-road-boundary.mat');
+model = helper.downloadPretrainedRoadBoundaryDetection;
+net = model.net;
 
 %% Specify Detection Parameters
 % Use the function helper.createDetectionParameters to specify the
@@ -20,7 +21,7 @@ executionEnvironment = "auto";
 
 %% Detect on an Image
 % Read the test image.
-image = imread("testImage.png");
+image = imread("images/testImage.png");
 
 % Call detectRoadBoundaries to detect the road boundaries.
 roadBoundaries = detectRoadBoundaries(net, image, params, executionEnvironment);

@@ -5,10 +5,11 @@
 % * Computer Vision Toolbox(TM).
 
 %% Add path to the source directory
-addpath('src','model','images');
+addpath('src');
 
 %% Load Pre-trained Network
-load('model/resa-road-boundary.mat');
+model = helper.downloadPretrainedRoadBoundaryDetection;
+net = model.net;
 
 %% Specify Detection Parameters
 % Use the function helper.createDetectionParameters to specify the
