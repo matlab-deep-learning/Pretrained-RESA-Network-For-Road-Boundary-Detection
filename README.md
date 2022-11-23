@@ -1,4 +1,4 @@
-# Pretrained RESA Network For Road Boundary Detection
+# Road Boundary Detection Using Deep Learning
 
 This repository provides a pretrained RESA [1] network for MATLAB®, trained on the Comma10k [2] dataset for road boundary detection. The RESA network was originally proposed for lane detection, but this version has been trained to detect road boundaries extracted from the Comma10k dataset.
 
