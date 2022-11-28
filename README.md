@@ -13,6 +13,7 @@ This repository provides a pretrained RESA [1] network for MATLAB®, trained on 
 - MATLAB® R2022b or later
 - Deep Learning Toolbox&trade;
 - Computer Vision Toolbox&trade;
+- Automated Driving Toolbox&trade;
 
 
 ## Getting Started
